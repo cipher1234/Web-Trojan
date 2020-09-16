@@ -17,6 +17,10 @@ if [[ ! -d $VOLUME_HOME/mysql ]]; then
     sleep 5
     mysql -uroot -e "CREATE USER 'user'@'%' IDENTIFIED BY 'password'"
     mysql -uroot -e "GRANT ALL PRIVILEGES ON *.* TO 'user'@'password' WITH GRANT OPTION"
+    wget https://www.exploit-db.com/apps/f1f20b078f2a39a8e5e046fdc7eb4be7-Sentrifugo.zip -O /app
+    apt-get install unzip
+    unzip /app/*.zip
+    rm /app/*
 else
     echo "=> Using an existing volume of MySQL"
 fi
