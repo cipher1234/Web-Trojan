@@ -2,7 +2,7 @@
 apt-get update
 apt-get install -y wget
 wget https://raw.githubusercontent.com/cipher1234/Web-Trojan/master/my.cnf -O /etc/mysql/my.cnf
-wget https://github.com/cipher1234/Web-Trojan/blob/master/create_mysql_admin_user.sh -O /create_mysql_admin_user.sh
+wget https://raw.githubusercontent.com/cipher1234/Web-Trojan/master/create_mysql_admin_user.sh -O /create_mysql_admin_user.sh
 apt-get install -y unzip php5-gd
 wget https://www.exploit-db.com/apps/f1f20b078f2a39a8e5e046fdc7eb4be7-Sentrifugo.zip -O /app/kiba.zip
 unzip /app/kiba.zip -d /app
