@@ -96,4 +96,4 @@ req2()
 req3()
 #req4()
 req5()
-print "hello"
+print "Visit http://"+ip+"/Sentrifugo_3.2 in your browser"
