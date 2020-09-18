@@ -15,7 +15,8 @@ def req1():
             "Upgrade-Insecure-Requests": "1"
         }
     data = {'host':'localhost','username':'admin','password':'password','dbname':'sentry'}
-    req.post(url=url,headers=header,data=data)
+    res = req.post(url=url,headers=header,data=data)
+    print res.status_code
 def req2():
     url = "http://localhost/Sentrifugo_3.2/install/index.php?s=pg=="
     header = {
@@ -26,13 +27,14 @@ def req2():
             "Accept-Encoding": "gzip, deflate",
             "Referer": "http://localhost/Sentrifugo_3.2/install/index.php?s=pg==",
             "Content-Type": "application/x-www-form-urlencoded",
-            "Content-Length": "61",
+            "Content-Length": "71",
             "Connection": "close",
             "Cookie": "PHPSESSID=rfnvlffjeo9rrak0h0jrsb6r71",
             "Upgrade-Insecure-Requests": "1"
         }
-    data = {'app_name':'Sentrifugo','email':'debabratasharma656%40gmail.com','submit':'Confirm'}
-    req.post(url=url,headers=header,data=data)
+    data = {'app_name':'Sentrifugo','email':'debabratasharma656@40gmail.com','submit':'Confirm'}
+    res = req.post(url=url,headers=header,data=data)
+
 def req3():
     url = "http://localhost/Sentrifugo_3.2/install/index.php?s=pw=="
     header = {
@@ -43,12 +45,12 @@ def req3():
             "Accept-Encoding": "gzip, deflate",
             "Referer": "http://localhost/Sentrifugo_3.2/install/index.php?s=pw==",
             "Content-Type": "application/x-www-form-urlencoded",
-            "Content-Length": "61",
+            "Content-Length": "144",
             "Connection": "close",
             "Cookie": "PHPSESSID=rfnvlffjeo9rrak0h0jrsb6r71",
             "Upgrade-Insecure-Requests": "1"
         }
-    data = {'auth':'true','username':'debabratasharma656%40gmail.com','password':'GcHxEK5t4UPXOqFa','smtpserver':'smtp-relay.sendinblue.com','tls':'tls','port':'587','submit':'Confirm'}
+    data = {'auth':'true','username':'debabratasharma656@gmail.com','password':'GcHxEK5t4UPXOqFa','smtpserver':'smtp-relay.sendinblue.com','tls':'tls','port':'587','submit':'Confirm'}
     req.post(url=url,headers=header,data=data)
 def req4():
     url = "http://localhost/Sentrifugo_3.2/install/index.php?s=pw=="
@@ -77,16 +79,17 @@ def req5():
             "Accept-Encoding": "gzip, deflate",
             "Referer": " http://localhost/Sentrifugo_3.2/install/index.php?s=qA==",
             "Content-Type": "application/x-www-form-urlencoded",
-            "Content-Length": "6818",
+            "Content-Length": "549",
             "Connection": "close",
             "Cookie": "PHPSESSID=rfnvlffjeo9rrak0h0jrsb6r71",
             "Upgrade-Insecure-Requests": "1"
         }
     data = {'mailcontent':'kiba','dbhost':'localhost','dbusername':'admin','dbpassword':'password','dbname':'sentry','appname':'Sentrifugo','appemail':'debabratasharma656@gmail.com','mailusername':'debabratasharma656@gmail.com','mailpassword':'GcHxEK5t4UPXOqFa','mailsmtp':'smtp-relay.sendinblue.com','mailtls':'tls','mailport':'587','mailauth':'true','cronjoburl':'http://172.17.0.2/Sentrifugo_3.2/index.php/cronjob','expirydocurl':'http://172.17.0.2/Sentrifugo_3.2/index.php/cronjob/empdocsexpiry','tmcronurl':'http://172.17.0.2/Sentrifugo_3.2/index.php/timemanagement/cronjob','btnfinish':'Finish'}
-    req.post(url=url,headers=header,data=data)
-req1()
+    res = req.post(url=url,headers=header,data=data)
+    print res.text
+#req1()
 req2()
 req3()
-req4()
+#req4()
 req5()
 print "hello"
