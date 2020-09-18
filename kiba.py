@@ -70,7 +70,7 @@ def req4():
     data = {'auth':'true','username':'debabratasharma656%40gmail.com','password':'GcHxEK5t4UPXOqFa','smtpserver':'smtp-relay.sendinblue.com','tls':'tls','port':'587','submit':'Confirm'}
     req.post(url=url,headers=header,data=data)
 def req5():
-    url = "http://localhost/Sentrifugo_3.2/Sentrifugo_3.2/success.php"
+    url = "http://localhost/Sentrifugo_3.2/success.php"
     header = {
             "Host": "localhost",
             "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0",
@@ -87,7 +87,7 @@ def req5():
     data = {'mailcontent':'kiba','dbhost':'localhost','dbusername':'admin','dbpassword':'password','dbname':'sentry','appname':'Sentrifugo','appemail':'debabratasharma656@gmail.com','mailusername':'debabratasharma656@gmail.com','mailpassword':'GcHxEK5t4UPXOqFa','mailsmtp':'smtp-relay.sendinblue.com','mailtls':'tls','mailport':'587','mailauth':'true','cronjoburl':'http://172.17.0.2/Sentrifugo_3.2/index.php/cronjob','expirydocurl':'http://172.17.0.2/Sentrifugo_3.2/index.php/cronjob/empdocsexpiry','tmcronurl':'http://172.17.0.2/Sentrifugo_3.2/index.php/timemanagement/cronjob','btnfinish':'Finish'}
     res = req.post(url=url,headers=header,data=data)
     print res.text
-#req1()
+req1()
 req2()
 req3()
 #req4()
