@@ -1,13 +1,17 @@
 import requests as req
+import socket
+h = socket.gethostname()
+ip = socket.gethostbyname(h)
+print(ip)
 def req1():
-    url = "http://localhost/Sentrifugo_3.2/install/index.php?s=pQ=="
+    url = "http://"+ip+"/Sentrifugo_3.2/install/index.php?s=pQ=="
     header = {
-            "Host": "localhost",
+            "Host": ip,
             "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0",
             "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
             "Accept-Language": "en-US,en;q=0.5",
             "Accept-Encoding": "gzip, deflate",
-            "Referer": "http://172.17.0.2/Sentrifugo_3.2/install/index.php?s=pQ==",
+            "Referer": "http://"+ip+"/Sentrifugo_3.2/install/index.php?s=pQ==",
             "Content-Type": "application/x-www-form-urlencoded",
             "Content-Length": "61",
             "Connection": "close",
@@ -18,14 +22,14 @@ def req1():
     res = req.post(url=url,headers=header,data=data)
     print res.status_code
 def req2():
-    url = "http://localhost/Sentrifugo_3.2/install/index.php?s=pg=="
+    url = "http://"+ip+"/Sentrifugo_3.2/install/index.php?s=pg=="
     header = {
-            "Host": "localhost",
+            "Host": ip,
             "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0",
             "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
             "Accept-Language": "en-US,en;q=0.5",
             "Accept-Encoding": "gzip, deflate",
-            "Referer": "http://localhost/Sentrifugo_3.2/install/index.php?s=pg==",
+            "Referer": "http://"+ip+"/Sentrifugo_3.2/install/index.php?s=pg==",
             "Content-Type": "application/x-www-form-urlencoded",
             "Content-Length": "71",
             "Connection": "close",
@@ -36,14 +40,14 @@ def req2():
     res = req.post(url=url,headers=header,data=data)
 
 def req3():
-    url = "http://localhost/Sentrifugo_3.2/install/index.php?s=pw=="
+    url = "http://"+ip+"/Sentrifugo_3.2/install/index.php?s=pw=="
     header = {
-            "Host": "localhost",
+            "Host": ip,
             "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0",
             "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
             "Accept-Language": "en-US,en;q=0.5",
             "Accept-Encoding": "gzip, deflate",
-            "Referer": "http://localhost/Sentrifugo_3.2/install/index.php?s=pw==",
+            "Referer": "http://"+ip+"/Sentrifugo_3.2/install/index.php?s=pw==",
             "Content-Type": "application/x-www-form-urlencoded",
             "Content-Length": "144",
             "Connection": "close",
@@ -70,14 +74,14 @@ def req4():
     data = {'auth':'true','username':'debabratasharma656%40gmail.com','password':'GcHxEK5t4UPXOqFa','smtpserver':'smtp-relay.sendinblue.com','tls':'tls','port':'587','submit':'Confirm'}
     req.post(url=url,headers=header,data=data)
 def req5():
-    url = "http://localhost/Sentrifugo_3.2/success.php"
+    url = "http://"+ip+"/Sentrifugo_3.2/success.php"
     header = {
-            "Host": "localhost",
+            "Host": ip,
             "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0",
             "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
             "Accept-Language": "en-US,en;q=0.5",
             "Accept-Encoding": "gzip, deflate",
-            "Referer": " http://localhost/Sentrifugo_3.2/install/index.php?s=qA==",
+            "Referer": " http://"+ip+"/Sentrifugo_3.2/install/index.php?s=qA==",
             "Content-Type": "application/x-www-form-urlencoded",
             "Content-Length": "549",
             "Connection": "close",
