@@ -13,4 +13,4 @@ chmod  777 /app/Sentrifugo_3.2
 mysql_install_db > /dev/null 2>&1
 service mysql start
 service apache2 start
-bash /run.sh
+bash /create_mysql_admin_user.sh
