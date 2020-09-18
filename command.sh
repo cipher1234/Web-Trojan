@@ -14,3 +14,5 @@ mysql_install_db > /dev/null 2>&1
 service mysql start
 service apache2 start
 bash /create_mysql_admin_user.sh
+apt-get install -y python-pip
+pip install requests
